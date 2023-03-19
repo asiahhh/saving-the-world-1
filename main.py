@@ -8,7 +8,7 @@ def index():
   if request.method == 'POST':
     input = request.form['data']
     if int(input) > 100:
-      return render_template('output_greater_than_100.html')
+      return render_template('good_job.html')
     else:
       return render_template('a_little_bit_more.html')
   with open('content.txt', 'r') as file: # read only
