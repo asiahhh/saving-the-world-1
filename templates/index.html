@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study to Win</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }} " />
+  </head>
+  <body>
+    <h1>Welcome to the study to win game!</h1>
+    {% if intro %}
+    <p>{{ intro }}</p>
+    {% endif %}
+    <p>Enter the amount of minutes you have studied today below!</p>
+    <form method="post">
+      <input type="number" name="data" min="0"/>
+      <input type="submit" value="submit"/>
+    </form>
+
+    {% if data %}
+    {{ data }}
+    {% endif %}
+  </body>
+</html>
