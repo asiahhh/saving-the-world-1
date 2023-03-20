@@ -10,9 +10,9 @@ def index():
     if request.method == 'POST':
         data = request.form['data']
         data = int(data) # convert data to integer
-        if data < 100:
+        if data < 180:
             return render_template('less.html')
-        elif 100 <= data < 1440:
+        elif 180 <= data < 1440:
             return render_template('middle.html')
         else:
             return render_template('more.html')
